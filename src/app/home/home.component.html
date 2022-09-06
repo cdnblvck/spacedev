@@ -1,0 +1,17 @@
+
+<!-- Resources -->
+<h2>Launch Liste</h2>
+<div class="card-container">
+  <router-outlet></router-outlet>
+  <ul>
+    <li *ngFor="let result of results">
+
+      <a [routerLink]="['/',result.id]"
+         class="rz-listing-favorite">
+        <i class="far fa-heart"></i>
+        {{result.name}} | {{result.status.abbrev}}
+      </a>
+    </li>
+  </ul>
+</div>
+
